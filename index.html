@@ -3,281 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Global Horizons Tours | International Travel & Safaris</title>
-<meta name="description" content="International travel tours, safaris, car hire, accommodation, restaurants with PayPal, M-Pesa and card payments.">
+<title>Global Horizons Tours | Safari Packages</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* General styles */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-html{scroll-behavior:smooth;}
-body{background:#f8f9fa;color:#333;line-height:1.6;}
-header{background:#0b3d91;color:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;transition:.3s;}
-header.scrolled{background:#072a61;}
+body{background:#f8f9fa;color:#333;line-height:1.7;}
+
+header{
+background:#0b3d91;color:#fff;padding:15px 40px;
+display:flex;justify-content:space-between;align-items:center;
+position:sticky;top:0;z-index:1000;
+}
+
 nav a{color:#fff;text-decoration:none;margin-left:15px;font-size:14px;}
 nav a:hover{color:#ff9800;}
 
 .hero{
 height:90vh;
-background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg') center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;
+text-align:center;color:#fff;padding:20px;
 }
-.hero h2{font-size:46px;margin-bottom:20px;}
-.hero p{font-size:20px;margin-bottom:20px;}
 
-.btn{background:#ff9800;color:#fff;padding:12px 30px;border-radius:5px;text-decoration:none;font-weight:600;}
+.hero h2{font-size:46px;margin-bottom:20px;}
+.hero p{font-size:20px;max-width:900px;margin:auto;}
+
+.btn{
+background:#ff9800;color:#fff;padding:10px 26px;
+border-radius:5px;text-decoration:none;font-weight:600;
+display:inline-block;transition:.3s;
+}
 .btn:hover{background:#e68900;}
+
+.card .btn{padding:6px 18px;font-size:13px;margin-top:10px;}
 
 section{padding:60px 40px;}
 .section-title{text-align:center;margin-bottom:40px;}
 .section-title h2{color:#0b3d91;font-size:32px;}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
 .card{
-background:#fff;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1);
-padding:0;text-align:center;overflow:hidden;transition:.3s;
+background:#fff;border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+overflow:hidden;transition:.3s;
 }
-.card:hover{transform:scale(1.05);}
+.card:hover{transform:scale(1.03);}
 .card img{width:100%;height:200px;object-fit:cover;}
+
 .card-content{padding:15px;}
-.card-content h3{margin-bottom:8px;color:#0b3d91;}
-.card-content p{font-size:14px;color:#555;}
+.card-content h3{color:#0b3d91;margin-bottom:8px;}
 
-/* REDUCE ONLY kui IMAGE */
-.card img{
-  width:70%;
-  height:200px;
-  object-fit:cover;
+.experience{
+max-width:1000px;margin:auto;font-size:15px;
+}
+.experience img{
+width:100%;max-height:350px;object-fit:cover;
+border-radius:10px;margin:15px 0;
+}
+.experience ul{margin-left:20px;margin-bottom:30px;}
+
+.payment-box{
+max-width:700px;margin:30px auto;
+background:#fff;padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+text-align:center;
 }
 
-
-/* REVIEWS */
-.review-stars{color:#ff9800;font-size:18px;margin-bottom:8px;}
-
-iframe{width:100%;border:0;border-radius:10px;}
-
-footer{background:#0b3d91;color:#fff;text-align:center;padding:20px;}
-
-.whatsapp-btn{
-position:fixed;bottom:20px;right:20px;
-background:#25d366;color:#fff;width:60px;height:60px;
-border-radius:50%;font-size:30px;line-height:60px;
-text-align:center;text-decoration:none;
+.payment-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #ccc;
+border-radius:5px;
 }
 
-/* BOOKING STYLE (ONLY CHANGE) */
-.booking-wrapper{
-max-width:1100px;margin:auto;
-display:grid;grid-template-columns:1.3fr 1fr;gap:40px;
+.payment-method{
+display:flex;align-items:center;
+justify-content:center;gap:12px;margin:15px 0;
 }
-.booking-form,.payment-box{
-background:#fff;padding:30px;border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-.booking-form h3,.payment-box h3{color:#0b3d91;margin-bottom:20px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;}
-.booking-form input,
-.booking-form select,
-.booking-form textarea{
-width:100%;padding:14px;border-radius:8px;border:1px solid #ccc;font-size:14px;
-}
-.booking-form textarea{height:110px;resize:none;}
+.payment-method img{height:35px;}
 
-.payment-methods{display:grid;gap:20px;}
-.pay-card{
-border:1px solid #eee;padding:20px;border-radius:12px;text-align:center;transition:.3s;
-}
-.pay-card:hover{box-shadow:0 10px 20px rgba(0,0,0,.15);}
-.pay-card img{max-width:120px;margin-bottom:10px;}
-.pay-btn{
-display:inline-block;margin-top:10px;
-background:#ff9800;color:#fff;
-padding:10px 25px;border-radius:6px;
-text-decoration:none;font-weight:600;
-}
-.secure-note{text-align:center;margin-top:20px;color:#28a745;font-size:14px;}
-
-@media(max-width:900px){
-.booking-wrapper{grid-template-columns:1fr;}
-.hero h2{font-size:32px;}
+footer{
+background:#0b3d91;color:#fff;
+text-align:center;padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="google_translate_element" style="text-align:right;padding:10px;"></div>
-
-<header id="header">
+<header>
 <h2>Global Horizons Tours</h2>
 <nav>
-<a href="#services">Services</a>
-<a href="#cars">Car Rentals</a>
-<a href="#accommodations">Accommodations</a>
-<a href="#restaurants">Restaurants</a>
-<a href="#reviews">Reviews</a>
+<a href="#packages">Packages</a>
 <a href="#contact">Booking</a>
 </nav>
 </header>
 
 <section class="hero">
 <div>
-<h2>International Travel Made Easy</h2>
-<p>Safaris • Car Hire • Hotels • Restaurants • Secure Payments</p>
+<h2>Luxury Safari & Scenic Travel Experiences Across Kenya</h2>
+<p>
+We create unforgettable journeys across Kenya using custom Tour Safari Vans (TSV) and 4×4 safari vehicles.
+</p><br>
 <a href="#contact" class="btn">Book Now</a>
 </div>
 </section>
 
-<section id="services">
-<div class="section-title"><h2>Our Services</h2></div>
+<!-- HOW YOU TRAVEL -->
+<section class="experience">
+<div class="section-title"><h2>How You Travel With Us</h2></div>
+
+<h3>🚙 Tour Safari Van (TSV) Experience</h3>
+<img src="image.png">
+<ul>
+<li>Elevated pop-up roof for wildlife viewing</li>
+<li>Comfortable, spacious seating</li>
+<li>Ideal for group safaris and long tours</li>
+<li>Guided by experienced local drivers</li>
+</ul>
+
+<h3>🚙 4×4 Safari Adventure</h3>
+<img src="WhatsApp Image 2026-01-17 at 11.32.48 AM.jpeg">
+<ul>
+<li>Access to rugged and off-road terrain</li>
+<li>Close wildlife encounters</li>
+<li>Perfect for photographers and adventurers</li>
+<li>Luxury combined with power</li>
+</ul>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+<div class="section-title"><h2>Safari Packages</h2></div>
+
 <div class="cards">
-<div class="card"><img src="tour.jfif"><div class="card-content"><h3>Tour Guides</h3><p>Experienced multilingual guides.</p></div></div>
-<div class="card"><img src="accc.png"><div class="card-content"><h3>Accommodation</h3><p>Luxury lodges & camps.</p></div></div>
-<div class="card"><img src="jk.png"><div class="card-content"><h3>Restaurants</h3><p>Top dining experiences.</p></div></div>
-<div class="card"><img src="kui.jpg"><div class="card-content"><h3>Destinations</h3><p>Kenya, Zanzibar & beyond.</p></div></div>
+<div class="card">
+<img src="maraa.jpg">
+<div class="card-content">
+<h3>Maasai Mara</h3>
+<p>Vast savannahs and iconic wildlife encounters. Witness the Big Five in their natural habitat with guided game drives.</p>
+<p><strong>Price:</strong> $1,200 per person</p>
+<a href="#contact" class="btn">Book</a>
+</div>
+</div>
+
+<div class="card">
+<img src="amboseli.jfif">
+<div class="card-content">
+<h3>Amboseli</h3>
+<p>Elephants with Mount Kilimanjaro views. Explore vast plains and photograph majestic elephants and stunning landscapes.</p>
+<p><strong>Price:</strong> $950 per person</p>
+<a href="#contact" class="btn">Book</a>
+</div>
+</div>
+
+<div class="card">
+<img src="tsavo.jfif">
+<div class="card-content">
+<h3>Tsavo East & West</h3>
+<p>Red elephants and raw wilderness. Experience rugged terrain and authentic safari adventure with professional guides.</p>
+<p><strong>Price:</strong> $1,100 per person</p>
+<a href="#contact" class="btn">Book</a>
+</div>
+</div>
+
+<div class="card">
+<img src="nakuru.jpg">
+<div class="card-content">
+<h3>Lake Nakuru</h3>
+<p>Flamingos, rhinos, and scenic lakes. Ideal for wildlife photography and bird watching in serene natural surroundings.</p>
+<p><strong>Price:</strong> $800 per person</p>
+<a href="#contact" class="btn">Book</a>
+</div>
+</div>
+
+<div class="card">
+<img src="coast.jpg">
+<div class="card-content">
+<h3>Kenya's Coast</h3>
+<p>Luxury road journeys and relaxation. Explore Kenya’s coastline and scenic landscapes while enjoying comfort.</p>
+<p><strong>Price:</strong> $1,050 per person</p>
+<a href="#contact" class="btn">Book</a>
+</div>
+</div>
 </div>
 </section>
 
-<section id="cars">
-<div class="section-title"><h2>Car Rentals</h2></div>
-<div class="cards">
-<div class="card"><img src="image.png"><div class="card-content"><h3>4x4 Land Cruiser</h3><p>Perfect safari vehicle.</p></div></div>
-<div class="card"><img src="vann.jpeg"><div class="card-content"><h3>Safari Van</h3><p>Comfortable group travel.</p></div></div>
-<div class="card"><img src="dddd.jfif"><div class="card-content"><h3>Luxury SUV</h3><p>Executive travel.</p></div></div>
-</div>
+<!-- ABOUT US -->
+<section class="experience">
+<div class="section-title"><h2>About Us</h2></div>
+<p>
+We are a travel experience company dedicated to crafting memorable journeys across Kenya.
+Our focus is on how you travel, what you feel, and what you remember — using expertly guided safari vehicles and thoughtfully planned routes.
+Every journey balances comfort, exploration, and authenticity.
+</p>
 </section>
 
-<section id="accommodations">
-<div class="section-title"><h2>Accommodations</h2></div>
-<div class="cards">
-<div class="card"><img src="maasai.jpg"><div class="card-content"><h3>Safari Lodge</h3><p>Maasai Mara luxury.</p></div></div>
-<div class="card"><img src="rent.jpg"><div class="card-content"><h3>Tented Camp</h3><p>Authentic experience.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba"><div class="card-content"><h3>Beach Resort</h3><p>Relax by the ocean.</p></div></div>
-</div>
-</section>
-
-<section id="restaurants">
-<div class="section-title"><h2>Restaurants</h2></div>
-<div class="cards">
-<div class="card"><img src="llll.jfif"><div class="card-content"><h3>Local Cuisine</h3><p>Traditional dishes.</p></div></div>
-<div class="card"><img src="mmm.jfif"><div class="card-content"><h3>Fine Dining</h3><p>Elegant meals.</p></div></div>
-<div class="card"><img src="bbb.jpg"><div class="card-content"><h3>Beach Cafe</h3><p>Ocean views.</p></div></div>
-</div>
-</section>
-
-<!-- CUSTOMER REVIEWS -->
-  <section id="reviews">
-     <div class="section-title"><h2>Customer Reviews</h2></div>
-      <div class="cards"> <div class="card"><div class="card-content">
-         <h3>⭐⭐⭐⭐⭐</h3> 
-         <p>"The safari experience was amazing! Our guide was professional and very knowledgeable. 
-          The accommodations exceeded our expectations."</p>
-           <p><strong>Maria Gonzalez</strong><br><a
-             href="mailto:maria.gonzalez@example.com">maria.gonzalez@example.com</a></p> 
-            </div></div> 
-            <div class="card"><div class="card-content"> 
-              <h3>⭐⭐⭐⭐⭐</h3> 
-              <p>"Booking through Global Horizons Tours was seamless. 
-                PayPal and M-Pesa payments worked perfectly. Highly recommended!"</p> 
-                <p><strong>John Smith</strong><br><a 
-                  href="mailto:john.smith@example.com">john.smith@example.com</a
-                  ></p> 
-                </div></div>
-
-                <div class="card"><div class="card-content">
-                   <h3>⭐⭐⭐⭐⭐</h3>
-                    <p>"Loved the car hire service. Our 4x4 Land Cruiser was comfortable, clean, and perfect for the safari. 
-                      The team was very helpful."</p> 
-                      <p><strong>Priya Patel</strong><br><a 
-                        href="mailto:priya.patel@example.com">priya.patel@example.com</a></p>
-                       </div></div> 
-                       
-                       <div class="card"><div class="card-content"> 
-                        <h3>⭐⭐⭐⭐⭐</h3> 
-                        <p>"The accommodations were top-notch, and the restaurants recommended by the team were incredible.
-                           Truly unforgettable experience."</p> 
-                           <p><strong>Ahmed Khalid</strong><br><a
-                             href="mailto:ahmed.khalid@example.com">ahmed.khalid@example.com</a></p> 
-                            </div></div>
-                           </div>
-                           </section>
+<!-- PAYMENTS -->
 <section id="contact">
 <div class="section-title"><h2>Booking & Payments</h2></div>
 
-<div class="booking-wrapper">
+<div class="payment-box">
 
-<form class="booking-form">
-<h3>1. Booking Details</h3>
-<div class="form-row">
+<!-- Name & Email -->
 <input type="text" placeholder="Full Name" required>
 <input type="email" placeholder="Email Address" required>
+
+<div class="payment-method">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
 </div>
 
-<div class="form-row">
-<select required>
-<option disabled selected>Select Destination</option>
-<option>Maasai Mara Safari</option>
-<option>Amboseli Safari</option>
-<option>Zanzibar Beach Holiday</option>
-</select>
-<select required>
-<option disabled selected>Select Service</option>
-<option>Safari Package</option>
-<option>Car Hire</option>
-<option>Accommodation</option>
-<option>Restaurant Reservation</option>
-</select>
-</div>
-
-<div class="form-row">
-<input type="date" required>
-<input type="number" min="1" placeholder="Guests" required>
-</div>
-
-<textarea placeholder="Special requests (optional)"></textarea>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+<input type="hidden" name="item_name" value="Safari Booking">
+<input type="hidden" name="currency_code" value="USD">
+<input type="submit" value="Pay with PayPal" class="btn">
 </form>
 
-<div class="payment-box">
-<h3>2. Payment Method</h3>
-
-<div class="payment-methods">
-<div class="pay-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
-<p>PayPal / Debit / Credit Card</p>
-<a href="#" class="pay-btn">Proceed to Payment</a>
+<div class="payment-method" style="margin-top:25px;">
+<img src="M-PESA_LOGO-01.svg.png">
 </div>
-
-<div class="pay-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/M-PESA_LOGO-01.svg">
-<p>M-Pesa</p>
-<p>PayBill: <strong>YOUR_PAYBILL</strong><br>Account: Booking Name</p>
-</div>
-</div>
-
-<p class="secure-note">🔒 Secure & Trusted Payments</p>
-</div>
+<p>
+Till Number: <strong>123456</strong><br>
+Account Name: <strong>Global Horizons Tours</strong>
+</p>
 
 </div>
 </section>
 
 <footer>
-<p>&copy; 2026 Global Horizons Tours</p>
+<p>Ready to experience Kenya? Every mile tells a story.</p>
 </footer>
-
-<a class="whatsapp-btn" href="https://wa.me/YOURNUMBER" target="_blank">💬</a>
-
-<script>
-function googleTranslateElementInit(){
-new google.translate.TranslateElement({pageLanguage:'en'},'google_translate_element');
-}
-window.addEventListener('scroll',()=>{
-document.getElementById('header').classList.toggle('scrolled',window.scrollY>50)
-});
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
